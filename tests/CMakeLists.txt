@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(DtsCoreTests CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+enable_testing()
+add_executable(dts_tests test_main.cpp)
+target_compile_options(dts_tests PRIVATE $<$<CXX_COMPILER_ID:GNU,Clang>:-Wall -Wextra -Wpedantic>)
+add_test(NAME dts_core COMMAND dts_tests)
