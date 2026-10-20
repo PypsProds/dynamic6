@@ -1,0 +1,22 @@
+name: Build Geode Mod
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['**']
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the mod
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          build-config: RelWithDebInfo
+      - name: Upload .geode file
+        uses: actions/upload-artifact@v4
+        with:
+          name: input-timing-study
+          path: ${{ steps.build.outputs.build-output }}
