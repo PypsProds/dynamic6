@@ -1,0 +1,13 @@
+{
+  "geode": "5.11.2",
+  "version": "1.0.0",
+  "id": "pypsprods.dynamic",
+  "name": "Dynamic",
+  "developer": "PypsProds",
+  "description": "A timing-window jump assist for Geometry Dash 2.2081",
+  "tags": [
+    "gameplay",
+    "utility",
+    "mod"
+  ]
+}
